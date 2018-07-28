@@ -69,7 +69,7 @@
     (define (phase1) (void))
     (define (phase2) (void))
 
-    (define cached-mixin
+    (define prefetch-mixin
       (mixin (text:autocomplete<%>) ()
         
         (define/override (get-all-words)
@@ -84,6 +84,6 @@
         
         ))
     
-    (drracket:get/extend:extend-definitions-text cached-mixin)
-    (drracket:get/extend:extend-interactions-text cached-mixin)
+    (drracket:get/extend:extend-definitions-text prefetch-mixin)
+    (drracket:get/extend:extend-interactions-text prefetch-mixin)
     ))
