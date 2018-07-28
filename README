@@ -1,3 +1,1 @@
 This plugin intend to accerlate the loading of DrRacket autocomplete symbols.
-
-The first time you do autocompletion after install this plugin might still be slow, but afterwards it should be a lot faster even you restart DrRacket.

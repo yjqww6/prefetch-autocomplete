@@ -1,12 +1,12 @@
 #lang setup/infotab
 
 (define drracket-tools '(("tool.rkt")))
-(define drracket-tool-names '("cached-autocomplete"))
+(define drracket-tool-names '("prefetch-autocomplete"))
 (define drracket-tool-icons '(#f))
 
-(define collection "cached-autocomplete")
+(define collection "prefetch-autocomplete")
 (define authors '("yjqww6"))
-(define version "0.0.1")
+(define version "0.0.2")
 
-(define name "cached-autocomplete")
-(define deps '("base" "drracket" "drracket-plugin-lib" "gui-lib"))
+(define name "prefetch-autocomplete")
+(define deps '("base" "drracket" "drracket-plugin-lib" "gui-lib" "scribble-lib"))
