@@ -51,6 +51,7 @@
                (call-with-input-bytes
                 (place-channel-get pch)
                 fasl->s-exp))
+         (set! pch #f)
          symbols]
     [else (start-backend)
           (load-symbols)]))
