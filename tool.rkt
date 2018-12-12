@@ -1,6 +1,6 @@
 #lang racket
 
-(require racket/runtime-path racket/gui/base drracket/tool drracket/tool-lib framework racket/fasl)
+(require syntax/location racket/gui/base drracket/tool drracket/tool-lib framework racket/fasl)
 (provide tool@)
 
 (module backend racket/base
@@ -56,11 +56,9 @@
     [else (start-backend)
           (load-symbols)]))
 
-(define-runtime-path me "tool.rkt")
-
 (define (start-backend)
   (unless pch
-    (set! pch (dynamic-place `(submod ,me backend) 'run))))
+    (set! pch (dynamic-place (quote-module-path backend) 'run))))
 
 (define tool@
   (unit
