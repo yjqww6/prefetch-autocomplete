@@ -66,7 +66,6 @@
     (export drracket:tool-exports^)
     
     (define (phase1) (void))
-    (define (phase2) (void))
 
     (define prefetch-mixin
       (mixin (text:autocomplete<%>) ()
@@ -82,7 +81,8 @@
            (queue-callback start-backend)))
         
         ))
-    
-    (drracket:get/extend:extend-definitions-text prefetch-mixin)
-    (drracket:get/extend:extend-interactions-text prefetch-mixin)
+
+    (define (phase2)
+      (drracket:get/extend:extend-definitions-text prefetch-mixin #f)
+      (drracket:get/extend:extend-interactions-text prefetch-mixin #f))
     ))
